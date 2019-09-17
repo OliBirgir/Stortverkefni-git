@@ -40,5 +40,92 @@ def3.2
 def3.3
 
     
-    
+"""
 
+
+
+def oneone ():
+    print("You can travel (N)orth")
+    movement = input ("Direction: ")
+    if movement == "N":
+        onetwo()
+    else:
+        print("Not a valid direction!")
+        oneone()
+
+def onetwo ():
+    print("You can travel (N)orth or (E)ast or (S)outh")
+    movement = input ("Direction: ")
+    if movement == "N":
+        onethree()
+    elif movement == "E":
+        twotwo()
+    elif movement == "S":
+        oneone()
+    else:
+        print("Not a valid direction!")
+        onetwo()
+
+def onethree():
+    print("You can travel (E)ast or (S)outh")
+    movement = input ("Direction: ")
+    if movement == "E":
+        twothree()
+    elif movement =="S":
+        onetwo()
+    else:
+        print("Not a valid direction!")
+        onethree()
+def twoone():
+    print("You can travel (N)orth")
+    movement = input ("Direction: ")
+    if movement =="N":
+        twotwo()
+    else:
+        print("Not a valid direction!")
+        twoone()
+def twotwo():
+    print ("You can travel (S)outh or (W)est")
+    movement = input ("Direction: ")
+    if movement == "S":
+        twoone()
+    elif movement == "W":
+        onetwo()
+    else:
+        print("Not a valid direction!")
+        twotwo()
+def twothree():
+    print("You can travel (E)ast or (W)est")
+    movement = input ("Direction: ")
+    if movement == "W":
+        onethree()
+    elif movement == "E":
+        threethree()
+    else:
+        print("Not a valid direction!")
+        twothree()
+def threeone():
+    print("Victory!")
+def threetwo():
+    print("You can tavel (N)orth or (S)outh")
+    movement = input ("Direction: ")
+    if movement == "N":
+        threethree()
+    elif movement == "S":
+        threeone()
+    else:
+        print("Not a valid direction!")
+        threetwo()
+def threethree():
+    print("You can travel (S)outh or (W)est")
+    movement = input("Direction: ")
+    if movement == "S":
+        threetwo()
+    elif movement == "W":
+        twothree()
+    else:
+        print("Not a valid direction!")
+        threethree()
+
+
+oneone()
