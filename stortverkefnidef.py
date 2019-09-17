@@ -50,8 +50,8 @@ def oneone (mayPrint):
     movement = input ("Direction: ")        #notandi setur inn hvert hann vill fara.
     if movement == "N" or movement == "n":  #ef viðkomandi slær N eða n,
         onetwo(True)                        #fer hann í næsta reit/fall sem er onetwo.
-     else:
-       print("Not a valid direction!")     #ef að hann slær inn vitlausa átt, út villuskilaboð.
+    else:
+        print("Not a valid direction!")     #ef að hann slær inn vitlausa átt, út villuskilaboð.
         oneone(False)                      #kallar á sjálfan sig og runnar aftur.
 
 def onetwo (mayPrint):
