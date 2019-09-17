@@ -44,15 +44,15 @@ def3.3
 
 
 
-def oneone (mayPrint):
-    if mayPrint:
-        print("You can travel (N)orth")
-    movement = input ("Direction: ")
-    if movement == "N" or movement == "n":
-        onetwo(True)
-    else:
-        print("Not a valid direction!")
-        oneone(False)
+def oneone (mayPrint):                  
+    if mayPrint:                        
+        print("You can travel (N)orth")     #segir til hvert þú getur farið. Í þessu tilviki North.
+    movement = input ("Direction: ")        #notandi setur inn hvert hann vill fara.
+    if movement == "N" or movement == "n":  #ef viðkomandi slær N eða n,
+        onetwo(True)                        #fer hann í næsta reit/fall sem er onetwo.
+     else:
+       print("Not a valid direction!")     #ef að hann slær inn vitlausa átt, út villuskilaboð.
+        oneone(False)                      #kallar á sjálfan sig og runnar aftur.
 
 def onetwo (mayPrint):
     if mayPrint:
@@ -136,4 +136,4 @@ def threethree(mayPrint):
         threethree(False)
 
 
-oneone(True)
+oneone(True) # kallar á fyrsta fallið.
