@@ -44,88 +44,96 @@ def3.3
 
 
 
-def oneone ():
-    print("You can travel (N)orth")
+def oneone (mayPrint):
+    if mayPrint:
+        print("You can travel (N)orth")
     movement = input ("Direction: ")
-    if movement == "N":
-        onetwo()
+    if movement == "N" or movement == "n":
+        onetwo(True)
     else:
         print("Not a valid direction!")
-        oneone()
+        oneone(False)
 
-def onetwo ():
-    print("You can travel (N)orth or (E)ast or (S)outh")
+def onetwo (mayPrint):
+    if mayPrint:
+        print("You can travel (N)orth or (E)ast or (S)outh")
     movement = input ("Direction: ")
-    if movement == "N":
-        onethree()
-    elif movement == "E":
-        twotwo()
-    elif movement == "S":
-        oneone()
+    if movement == "N" or movement == "n":
+        onethree(True)
+    elif movement == "E" or movement == "e":
+        twotwo(True)
+    elif movement == "S" or movement == "s":
+        oneone(True)
     else:
         print("Not a valid direction!")
-        onetwo()
+        onetwo(False)
 
-def onethree():
-    print("You can travel (E)ast or (S)outh")
+def onethree(mayPrint):
+    if mayPrint:
+        print("You can travel (E)ast or (S)outh")
     movement = input ("Direction: ")
-    if movement == "E":
-        twothree()
-    elif movement =="S":
-        onetwo()
+    if movement == "E" or movement == "e":
+        twothree(True)
+    elif movement =="S" or movement == "s":
+        onetwo(True)
     else:
         print("Not a valid direction!")
-        onethree()
-def twoone():
-    print("You can travel (N)orth")
+        onethree(False)
+def twoone(mayPrint):
+    if mayPrint:
+        print("You can travel (N)orth")
     movement = input ("Direction: ")
-    if movement =="N":
-        twotwo()
+    if movement =="N" or movement == "n":
+        twotwo(True)
     else:
         print("Not a valid direction!")
-        twoone()
-def twotwo():
-    print ("You can travel (S)outh or (W)est")
+        twoone(False)
+def twotwo(mayPrint):
+    if mayPrint:
+        print ("You can travel (S)outh or (W)est")
     movement = input ("Direction: ")
-    if movement == "S":
-        twoone()
-    elif movement == "W":
-        onetwo()
+    if movement == "S" or movement == "s":
+        twoone(True)
+    elif movement == "W" or movement == "w":
+        onetwo(True)
     else:
         print("Not a valid direction!")
-        twotwo()
-def twothree():
-    print("You can travel (E)ast or (W)est")
+        twotwo(False)
+def twothree(mayPrint):
+    if mayPrint:
+        print("You can travel (E)ast or (W)est")
     movement = input ("Direction: ")
-    if movement == "W":
-        onethree()
-    elif movement == "E":
-        threethree()
+    if movement == "W" or movement == "w":
+        onethree(True)
+    elif movement == "E" or movement == "e":
+        threethree(True)
     else:
         print("Not a valid direction!")
-        twothree()
-def threeone():
+        twothree(False)
+def threeone(mayPrint):
     print("Victory!")
-def threetwo():
-    print("You can tavel (N)orth or (S)outh")
+def threetwo(mayPrint):
+    if mayPrint:
+        print("You can tavel (N)orth or (S)outh")
     movement = input ("Direction: ")
-    if movement == "N":
-        threethree()
-    elif movement == "S":
-        threeone()
+    if movement == "N" or movement == "n":
+        threethree(True)
+    elif movement == "S" or movement == "s":
+        threeone(True)
     else:
         print("Not a valid direction!")
-        threetwo()
-def threethree():
-    print("You can travel (S)outh or (W)est")
+        threetwo(False)
+def threethree(mayPrint):
+    if mayPrint:
+        print("You can travel (S)outh or (W)est")
     movement = input("Direction: ")
-    if movement == "S":
-        threetwo()
-    elif movement == "W":
-        twothree()
+    if movement == "S" or movement == "s":
+        threetwo(True)
+    elif movement == "W" or movement == "w":
+        twothree(True)
     else:
         print("Not a valid direction!")
-        threethree()
+        threethree(False)
 
 
-oneone()
+oneone(True)
